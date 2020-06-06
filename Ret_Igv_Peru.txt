@@ -1,0 +1,14 @@
+Option Explicit
+Function Ret_Igv_Peru(date1 As Double) As Double
+
+Dim myVal As Double
+myVal = DateValue(date1	)
+	If myVal >= DateValue("2014/03/01") Then
+		ret_igv_peru = 0.03
+	ElseIf myVal < DateValue("2014/03/01") And myVal >= DateValue("2002/06/01") Then
+		ret_igv_peru = 0.06
+	Else		
+		ret_igv_peru = 0.00
+	End If
+End Function
+
